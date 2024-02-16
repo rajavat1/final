@@ -1,4 +1,3 @@
-/********** Template CSS **********/
 :root {
     --primary: #16D5FF;
     --secondary: #999999;
@@ -108,7 +107,7 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
+    .navbar .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -184,6 +183,7 @@ h6,
 /*** Roadmap ***/
 .roadmap-carousel {
     position: relative;
+    display: flex;
 }
 
 .roadmap-carousel::before {
@@ -349,4 +349,28 @@ h6,
 
 .footer .copyright a:hover {
     color: var(--dark);
+}
+
+#hero_img {
+    -webkit-animation: 0.3s animi infinite ease-in-out;
+}
+
+@keyframes animi {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.1;
+    }
+}
+
+
+
+@media screen and (max-width:990px) {
+
+    .roadmap-carousel {
+        display: flex;
+        flex-direction: column;
+    }
 }

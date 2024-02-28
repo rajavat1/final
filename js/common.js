@@ -20,3 +20,39 @@ pages.addEventListener("click", () => {
         pages_manu.style.display = "none"
     }
 })
+//message 
+function sendmail() {
+    (function () {
+        emailjs.init({
+            publicKey: "rMP5ZHaXvphRwf5QB",
+        });
+    })();
+
+    var toparams = {
+        to: "rajavatonline@gmail.com",
+        reply_to: document.getElementById("replyto").value,
+    };
+    var serviceID = "service_29aaoef";
+    var templateID = "template_lhlvo75";
+    emailjs.send(serviceID, templateID, toparams).then(
+        (response) => {
+            alert('Your Subscription is SUCCESSFULLY Done!', response.status, response.text);
+        },
+        (error) => {
+            alert('Sonthing Went Wrong!!', error);
+        },
+    );
+    var params = {
+        reply_to: "rajavatonline@gmail.com",
+        to: document.getElementById("replyto").value,
+    };
+
+    emailjs.send("service_kr9amuh", "template_baksib5", params).then(
+        (response) => {
+            
+        },
+        (error) => {
+            
+        },
+    );
+}

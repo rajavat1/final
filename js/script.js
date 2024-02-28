@@ -1,3 +1,4 @@
+
 //Transactions Count
 let Today_Transactions_count = document.getElementById('Today_Transactions_count');
 let timelag;
@@ -33,9 +34,7 @@ for (let i = 0; i <= Total_Transactions_count_finishing; i++) {
     }, timelag);
 }
 
-//time counter
-
-//time count
+//time counter Home
 const home_day = document.getElementById('home_day');
 const home_hr = document.getElementById('home_hr');
 const home_min = document.getElementById('home_min');
@@ -63,14 +62,39 @@ var x = setInterval(function () {
     home_day.innerHTML = days;
     home_hr.innerHTML = hours;
     home_min.innerHTML = minutes;
-    home_sec.innerHTML =seconds;
+    home_sec.innerHTML = seconds;
 
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
-        home_day.innerHTML = `<span>00</span>days`;
-        home_hr.innerHTML = `<span>00</span>HRS`;
-        home_min.innerHTML = `<span>00</span>MINS`;
-        home_sec.innerHTML = `<span>00</span>SECS`;
+        home_day.innerHTML = `00`;
+        home_hr.innerHTML = `00`;
+        home_min.innerHTML = `00`;
+        home_sec.innerHTML = `00`;
     }
 }, 1000);
+
+
+
+//fqa
+function toggleCollapse(headingId, collapseId, btnId) {
+    const heading = document.getElementById(headingId);
+    const collapse = document.getElementById(collapseId);
+    const btn = heading.getElementsByTagName("button")[0];
+
+    heading.addEventListener("click", () => {
+        if (collapse.classList.contains("show")) {
+            collapse.classList.remove("show");
+            btn.classList.add("collapsed");
+        } else {
+            collapse.classList.add("show");
+            btn.classList.remove("collapsed");
+        }
+    });
+}
+toggleCollapse("headingOne", "collapseOne", "btn1");
+toggleCollapse("headingTwo", "collapseTwo", "btn2");
+toggleCollapse("headingThree", "collapseThree", "btn3");
+toggleCollapse("headingFour", "collapseFour", "btn4");
+toggleCollapse("headingFive", "collapseFive", "btn5");
+toggleCollapse("headingSix", "collapseSix", "btn6");

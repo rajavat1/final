@@ -33,7 +33,7 @@
             <h2 class="m-0 text-primary"><img class="img-fluid me-2" src="logo.png" alt="" style="width: 45px;">CryptoFy
             </h2>
         </a>
-        <button type="button" class="navbar-toggler">
+        <button type="button" class="navbar-toggler" id="collapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -43,8 +43,8 @@
                 <a href="service.html" class="nav-item nav-link">Service</a>
                 <a href="roadmap.html" class="nav-item nav-link">Roadmap</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link">Pages <i class='bx bx-chevron-down'></i></a>
-                    <div class="dropdown-menu shadow-sm m-0">
+                    <a href="#" id="pages" class="nav-link">Pages <i class='bx bx-chevron-down'></i></a>
+                    <div id="pages_manu" class="dropdown-menu shadow-sm m-0">
                         <a href="feature.html" class="dropdown-item">Feature</a>
                         <a href="token.html" class="dropdown-item">Token Sale</a>
                         <a href="faq.html" class="dropdown-item">FAQs</a>
@@ -409,11 +409,11 @@
                         </div>
                         <div class="accordion-item wow fadeInUp">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button" type="button">
+                                <button class="accordion-button collapsed" type="button">
                                     How long will it take to get a new website?
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse show">
+                            <div id="collapseTwo" class="accordion-collapse collapse">
                                 <div class="accordion-body">
                                     Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna
                                     diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
@@ -422,11 +422,11 @@
                         </div>
                         <div class="accordion-item wow fadeInUp">
                             <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button" type="button" >
+                                <button class="accordion-button collapsed" type="button" >
                                     Do you only create HTML websites?
                                 </button>
                             </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse show">
+                            <div id="collapseThree" class="accordion-collapse collapse ">
                                 <div class="accordion-body">
                                     Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna
                                     diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
@@ -435,11 +435,11 @@
                         </div>
                         <div class="accordion-item wow fadeInUp">
                             <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button" type="button">
+                                <button class="accordion-button collapsed" type="button">
                                     Will my website be mobile-friendly?
                                 </button>
                             </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse show">
+                            <div id="collapseFour" class="accordion-collapse collapse ">
                                 <div class="accordion-body">
                                     Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna
                                     diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
@@ -448,11 +448,11 @@
                         </div>
                         <div class="accordion-item wow fadeInUp">
                             <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button " type="button" >
+                                <button class="accordion-button collapsed" type="button" >
                                     Will you maintain my site for me?
                                 </button>
                             </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse show">
+                            <div id="collapseFive" class="accordion-collapse collapse ">
                                 <div class="accordion-body">
                                     Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna
                                     diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
@@ -461,37 +461,11 @@
                         </div>
                         <div class="accordion-item wow fadeInUp">
                             <h2 class="accordion-header" id="headingSix">
-                                <button class="accordion-button" type="button">
+                                <button class="accordion-button collapsed" type="button">
                                     I’m on a strict budget. Do you have any low cost options?
                                 </button>
                             </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna
-                                    diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeInUp">
-                            <h2 class="accordion-header" id="headingSeven">
-                                <button class="accordion-button" type="button">
-                                    Will you maintain my site for me?
-                                </button>
-                            </h2>
-                            <div id="collapseSeven" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna
-                                    diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeInUp">
-                            <h2 class="accordion-header" id="headingEight">
-                                <button class="accordion-button" type="button">
-                                    I’m on a strict budget. Do you have any low cost options?
-                                </button>
-                            </h2>
-                            <div id="collapseEight" class="accordion-collapse collapse show">
+                            <div id="collapseSix" class="accordion-collapse collapse ">
                                 <div class="accordion-body">
                                     Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna
                                     diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
@@ -579,7 +553,8 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class='bx bx-chevron-up'></i></a>
 
-    <script src="js/script.js"></script>
+            <script src="js/common.js"></script>
+            <script src="js/script.js"></script>
 </body>
 
 </html>

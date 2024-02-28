@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
     --primary: #16D5FF;
     --secondary: #999999;
@@ -42,6 +44,7 @@ h6,
 .btn {
     font-weight: 500;
     transition: .5s;
+    border-radius: 25px;
 }
 
 .btn.btn-primary {
@@ -313,14 +316,14 @@ h6,
     transition: .3s;
 }
 
-.footer .btn.btn-link::before {
+/* .footer .btn.btn-link::before {
     position: relative;
     content: "\f105";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     color: var(--secondary);
     margin-right: 10px;
-}
+} */
 
 .footer .btn.btn-link:hover {
     color: var(--primary);
@@ -352,7 +355,7 @@ h6,
 }
 
 #hero_img {
-    -webkit-animation: 0.3s animi infinite ease-in-out;
+    animation: 0.3s animi infinite ease-in-out;
 }
 
 @keyframes animi {

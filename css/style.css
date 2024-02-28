@@ -76,7 +76,9 @@ h6,
     font-weight: normal;
 }
 
-
+.bx{
+    font-size: 20px;
+}
 /*** Navbar ***/
 .navbar.sticky-top {
     top: -100px;

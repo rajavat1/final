@@ -16,11 +16,6 @@ header {
 
 }
 
-p {
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
 .head {
     text-align: center;
     position: relative;
@@ -50,12 +45,46 @@ p {
 .collumn {
     font-size: 14px;
     line-height: 20px;
-    width: 17.5%;
+    width: 40%;
     display: inline-block;
     padding: 0 1% 0 1%;
     vertical-align: top;
     margin-bottom: 50px;
     transition: all .7s;
+
+    &:nth-child(1) {
+        width: 60%;
+    }
+
+    &:nth-child(2) {
+        width: 40%;
+    }
+
+    &:nth-child(3) {
+        width: 70%;
+    }
+
+    &:nth-child(4) {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .collumn:nth-child(1) {
+        width: 100%;
+    }
+
+    .collumn:nth-child(2) {
+        width: 100%;
+    }
+
+    .collumn:nth-child(3) {
+        width: 100%;
+    }
+
+    .collumn:nth-child(4) {
+        width: 100%;
+    }
 }
 
 .collumn+.collumn {

@@ -41,7 +41,10 @@ header {
 
 
 }
-
+.bw{
+    background-color: #2F2F2F;
+    border: none;
+}
 .collumn {
     font-size: 14px;
     line-height: 20px;
@@ -67,23 +70,49 @@ header {
     &:nth-child(4) {
         width: 30%;
     }
+
+    &:nth-last-child(3),
+    &:nth-last-child(2),
+    &:nth-last-child(1) {
+        width: 33%;
+    }
+
 }
 
+@media screen and (max-width:1300px) {
+    .collumn {
+
+        &:nth-child(3){
+            width: 60%;
+        }
+        &:nth-child(4) {
+            width: 40%;
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+    .collumn {
+
+        &:nth-child(3){
+            width: 55%;
+        }
+        &:nth-child(4) {
+            width: 45%;
+        }
+    }
+}
 @media screen and (max-width:900px) {
-    .collumn:nth-child(1) {
-        width: 100%;
-    }
+    .collumn {
 
-    .collumn:nth-child(2) {
-        width: 100%;
-    }
-
-    .collumn:nth-child(3) {
-        width: 100%;
-    }
-
-    .collumn:nth-child(4) {
-        width: 100%;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-last-child(3),
+        &:nth-last-child(2),
+        &:nth-last-child(1) {
+            width: 100%;
+        }
     }
 }
 

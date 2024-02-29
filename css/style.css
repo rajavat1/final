@@ -69,9 +69,27 @@
     font-weight: normal;
 }
 
-.bx{
+.button {
+    background-color: #16D5FF;
+    padding: 20px;
+    border-radius: 20px;
+    color: #111111;
+    font-weight: bold;
+
+    &:hover {
+        color: #16D5FF;
+        background-color: transparent;
+        border: 1px solid #999999;
+        padding: 19px;
+        
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.bx {
     font-size: 20px;
 }
+
 /*** Navbar ***/
 .navbar.sticky-top {
     top: -100px;

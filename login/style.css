@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-:root{
-    --color-background:#c9d6ff;
-    --background-btn:#16D5FF;
-    --white:#fff;
+:root {
+    --color-background: #c9d6ff;
+    --background-btn: #16D5FF;
+    --white: #fff;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
+body {
     background-color: var(--color-background);
     background: linear-gradient(to right, #e2e2e2, var(--color-background));
     display: flex;
@@ -23,7 +23,7 @@ body{
     height: 100vh;
 }
 
-.container{
+.container {
     background-color: var(--white);
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -34,25 +34,25 @@ body{
     min-height: 480px;
 }
 
-.container p{
+.container p {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-.container span{
+.container span {
     font-size: 12px;
 }
 
-.container a{
+.container a {
     color: #333;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-.container button{
+.container button {
     background-color: var(--background-btn);
     color: var(--white);
     font-size: 12px;
@@ -65,19 +65,20 @@ body{
     margin-top: 10px;
     cursor: pointer;
 }
-.span-btn{
+
+.span-btn {
     margin-top: 10px;
 }
 
-.container a.hidden{
+.container a.hidden {
     border-color: var(--white);
     cursor: pointer;
-    color:var(--background-btn);
+    color: var(--background-btn);
     font-weight: 900;
     margin-left: 1px;
 }
 
-.container form{
+.container form {
     background-color: var(--white);
     display: flex;
     align-items: center;
@@ -87,7 +88,7 @@ body{
     height: 100%;
 }
 
-.container input{
+.container input {
     background-color: #eee;
     border: none;
     margin: 8px 0;
@@ -98,53 +99,57 @@ body{
     outline: none;
 }
 
-.form-container{
+.form-container {
     position: absolute;
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
 }
 
-.sign-up{
+.sign-up {
     left: 0;
     width: 50%;
     z-index: 2;
 }
 
-.container.active .sign-up{
+.container.active .sign-up {
     transform: translateX(100%);
 }
 
-.sign-in{
+.sign-in {
     left: 0;
     width: 50%;
     opacity: 0;
     z-index: 1;
 }
 
-.container.active .sign-in{
+.container.active .sign-in {
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
     animation: move 0.6s;
 }
 
-@keyframes move{
-    0%, 49.99%{
+@keyframes move {
+
+    0%,
+    49.99% {
         opacity: 0;
         z-index: 1;
     }
-    50%, 100%{
+
+    50%,
+    100% {
         opacity: 1;
         z-index: 5;
     }
 }
 
-.social-icons{
+.social-icons {
     margin: 20px 0;
 }
 
-.social-icons a{
+.social-icons a {
     border: 1px solid #ccc;
     border-radius: 20%;
     display: inline-flex;
@@ -154,13 +159,15 @@ body{
     width: 40px;
     height: 40px;
 }
-.social-icons a:hover{
+
+.social-icons a:hover {
     color: var(--white);
     background-color: var(--background-btn);
     transition: all .3s ease-in-out;
     scale: .95;
 }
-.toggle-container{
+
+.toggle-container {
     position: absolute;
     top: 0;
     left: 50%;
@@ -172,12 +179,12 @@ body{
     z-index: 1000;
 }
 
-.container.active .toggle-container{
+.container.active .toggle-container {
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
 
-.toggle{
+.toggle {
     background-color: var(--background-btn);
     height: 100%;
     background: linear-gradient(to right, #5c6bc0, var(--background-btn));
@@ -190,11 +197,11 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
-.container.active .toggle{
+.container.active .toggle {
     transform: translateX(50%);
 }
 
-.toggle-panel{
+.toggle-panel {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -209,19 +216,87 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
-.toggle-left{
+.toggle-left {
     transform: translateX(-200%);
 }
 
-.container.active .toggle-left{
+.container.active .toggle-left {
     transform: translateX(0);
 }
 
-.toggle-right{
+.toggle-right {
     right: 0;
     transform: translateX(0);
 }
 
-.container.active .toggle-right{
+.container.active .toggle-right {
     transform: translateX(200%);
+}
+
+
+
+@media screen and (max-width:800px) {
+    .toggle-container {
+        display: none;
+    }
+
+    .container {
+        width: 400px;
+    }
+
+    .container.active .sign-in {
+        transform: unset;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container .sign-up {
+        transform: unset;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    .container {
+        width: 90%;
+        height: 70%;
+    }
+
+    .container.active .sign-in {
+        transform: unset;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container .sign-up {
+        transform: unset;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:350px) {
+    form h1 {
+        font-size: 1.5rem;
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .container span {
+        font-size: 10px;
+    }
+
+    .container a {
+        font-size: 11px;
+    }
+
 }

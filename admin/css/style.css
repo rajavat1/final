@@ -230,7 +230,7 @@ main aside{
     flex-direction: column;
     justify-content: space-between;
     height: 88vh;
-    width: 14vw;
+    /* width: 14vw; */
 }
 main aside button#close-btn{
     border: none;

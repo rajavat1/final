@@ -6,21 +6,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CryptoFy- Admin Dashboard</title>
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="shortcut icon" href="/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <!-- icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
 <body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <div class="container">
+                <h1>Welcome to XYZ Crypto Exchange</h1>
+                <p>By using our platform, you agree to the following terms and conditions:</p>
+                <ol>
+                    <li><b>Account Registration:</b>
+                        <ul>
+                            <li>You must be at least 18 years old to create an account.</li>
+                            <li>You are responsible for maintaining the confidentiality of your account credentials.
+                            </li>
+                            <li>You agree not to share your account details with anyone else.</li>
+                        </ul>
+                    </li>
+                    <li><b>Trading and Transactions:</b>
+                        <ul>
+                            <li>Trading cryptocurrencies involves risks. You acknowledge and accept these risks.</li>
+                            <li>We do not provide financial advice. Make informed decisions based on your own research.
+                            </li>
+                            <li>Transactions are irreversible. Double-check before confirming any trade.</li>
+                        </ul>
+                    </li>
+                    <li><b>Security:</b>
+                        <ul>
+                            <li>Enable two-factor authentication (2FA) for added security.</li>
+                            <li>Report any suspicious activity immediately.</li>
+                            <li>We are not liable for any losses due to security breaches.</li>
+                        </ul>
+                    </li>
+                    <li><b>Legal Compliance:</b>
+                        <ul>
+                            <li>You agree to comply with all applicable laws and regulations.</li>
+                            <li>We may request identity verification (KYC) for certain transactions.</li>
+                        </ul>
+                    </li>
+                    <li><b>Fees and Charges:</b>
+                        <ul>
+                            <li>Review our fee schedule for details on trading fees, withdrawal fees, and other charges.
+                            </li>
+                            <li>Fees may change without prior notice.</li>
+                        </ul>
+                    </li>
+                    <li><b>Privacy:</b>
+                        <ul>
+                            <li>Read our Privacy Policy to understand how we collect, use, and protect your data.</li>
+                            <li>We do not sell your personal information to third parties.</li>
+                        </ul>
+                    </li>
+                    <li><b>Termination:</b>
+                        <ul>
+                            <li>We reserve the right to suspend or terminate your account for any violation of these
+                                terms.</li>
+                            <li>You can close your account at any time.</li>
+                        </ul>
+                    </li>
+                    <li><b>Disclaimer:</b>
+                        <ul>
+                            <li>Cryptocurrency markets are volatile. We are not responsible for any financial losses.
+                            </li>
+                            <li>Use our platform at your own risk.</li>
+                        </ul>
+                    </li>
+                    <!-- Add other terms here -->
+                </ol>
+                <button id="closeModalBtn2" class=" btn btn-primary py-2 px-3 mt-2">Done</button>
+            </div>
 
+        </div>
+    </div>
     <!-- navbar -->
     <nav>
         <div class="container">
@@ -198,80 +267,37 @@
                     </div>
                 </div>
             </div>
-            <!-- monthly report -->
-            <div class="monthly-report">
-                <div class="report">
-                    <h3>Income</h3>
-                    <div>
-                        <details>
-                            <h1>$19,230</h1>
-                            <h4 class="success">+4.6%</h4>
-                        </details>
-                        <p class="text-muted">Compared to $18,384 last month</p>
-                    </div>
-                </div>
-                <div class="report">
-                    <h3>Expenses</h3>
-                    <div>
-                        <details>
-                            <h1>$9,113</h1>
-                            <h4 class="danger">-6.2%</h4>
-                        </details>
-                        <p class="text-muted">Compared to $9,715 last month</p>
-                    </div>
-                </div>
-                <div class="report">
-                    <h3>Cashback</h3>
-                    <div>
-                        <details>
-                            <h1>$4,390</h1>
-                            <h4 class="success">+2.9%</h4>
-                        </details>
-                        <p class="text-muted">Compared to $4,266 last month</p>
-                    </div>
-                </div>
-                <div class="report">
-                    <h3>Income</h3>
-                    <div>
-                        <details>
-                            <h1>$86,374</h1>
-                            <h4 class="danger">-5.2%</h4>
-                        </details>
-                        <p class="text-muted">Compared to $91,111 last month</p>
-                    </div>
-                </div>
-            </div>
             <!-- fast payment -->
             <div class="fast-payment">
-                <h2>Fast Payment</h2>
+                <h2>Live Price</h2>
                 <div class="badges">
                     <div class="badge">
                         <span class="material-icons-sharp">add</span>
                     </div>
                     <div class="badge">
                         <span class="bg-primary"></span>
-                        <div>
+                        <div id="BTC_btn">
                             <h5>BTC</h5>
                             <h4>$54</h4>
                         </div>
                     </div>
                     <div class="badge">
                         <span class="bg-success"></span>
-                        <div>
+                        <div id="ETH_btn">
                             <h5>ETH</h5>
                             <h4>$77</h4>
                         </div>
                     </div>
                     <div class="badge">
                         <span class="bg-primary"></span>
-                        <div>
+                        <div id="USDT_btn">
                             <h5>USDT</h5>
                             <h4>$240</h4>
                         </div>
                     </div>
                     <div class="badge">
                         <span class="bg-danger"></span>
-                        <div>
+                        <div id="DOG_btn">
                             <h5>DOG</h5>
                             <h4>$27</h4>
                         </div>
@@ -280,10 +306,121 @@
             </div>
             </div>
             <!-- canvas -->
-            <canvas id="chart"></canvas>
+            <div id="chart">
+                <!-- TradingView Widget BEGIN -->
+                <div class="chart_data" id="BTC">
+                    <div class="tradingview-widget-container" style="height:100%;width:100%">
+                        <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%">
+                        </div>
+                        <script type="text/javascript"
+                            src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                                {
+                                    "autosize": true,
+                                        "symbol": "BITSTAMP:BTCUSD",
+                                            "interval": "D",
+                                                "timezone": "Etc/UTC",
+                                                    "theme": "dark",
+                                                        "style": "1",
+                                                            "locale": "en",
+                                                                "enable_publishing": false,
+                                                                    "hide_top_toolbar": true,
+                                                                        "hide_legend": true,
+                                                                            "save_image": false,
+                                                                                "calendar": false,
+                                                                                    "hide_volume": true,
+                                                                                        "support_host": "https://www.tradingview.com"
+                                }
+                            </script>
+                    </div>
+                </div>
+                <!-- TradingView Widget END -->
+
+                <!-- TradingView Widget BEGIN -->
+                <div class="chart_data" id="ETH">
+                    <div class="tradingview-widget-container" style="height:100%;width:100%">
+                        <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%">
+                        </div>
+                        <script type="text/javascript"
+                            src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                                {
+                                    "autosize": true,
+                                        "symbol": "BINANCE:ETHUSD",
+                                            "interval": "D",
+                                                "timezone": "Etc/UTC",
+                                                    "theme": "dark",
+                                                        "style": "1",
+                                                            "locale": "en",
+                                                                "enable_publishing": false,
+                                                                    "hide_top_toolbar": true,
+                                                                        "hide_legend": true,
+                                                                            "save_image": false,
+                                                                                "calendar": false,
+                                                                                    "hide_volume": true,
+                                                                                        "support_host": "https://www.tradingview.com"
+                                }
+                            </script>
+                    </div>
+                </div>
+                <!-- TradingView Widget END -->
+
+                <!-- TradingView Widget BEGIN -->
+                <div class="chart_data" id="USDT">
+                    <div class="tradingview-widget-container" style="height:100%;width:100%">
+                        <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%">
+                        </div>
+                        <script type="text/javascript"
+                            src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                                {
+                                    "autosize": true,
+                                        "symbol": "GEMINI:USDTUSD",
+                                            "interval": "D",
+                                                "timezone": "Etc/UTC",
+                                                    "theme": "dark",
+                                                        "style": "1",
+                                                            "locale": "en",
+                                                                "enable_publishing": false,
+                                                                    "hide_top_toolbar": true,
+                                                                        "hide_legend": true,
+                                                                            "save_image": false,
+                                                                                "calendar": false,
+                                                                                    "hide_volume": true,
+                                                                                        "support_host": "https://www.tradingview.com"
+                                }
+                            </script>
+                    </div>
+                </div>
+                <!-- TradingView Widget END -->
+                <!-- TradingView Widget BEGIN -->
+                <div class="chart_data" id="DOG">
+                    <div class="tradingview-widget-container" style="height:100%;width:100%">
+                        <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%">
+                        </div>
+
+                        <script type="text/javascript"
+                            src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                                {
+                                    "autosize": true,
+                                        "symbol": "EASYMARKETS:DOGUSD",
+                                            "interval": "D",
+                                                "timezone": "Etc/UTC",
+                                                    "theme": "dark",
+                                                        "style": "1",
+                                                            "locale": "en",
+                                                                "enable_publishing": false,
+                                                                    "hide_top_toolbar": true,
+                                                                        "hide_legend": true,
+                                                                            "save_image": false,
+                                                                                "calendar": false,
+                                                                                    "hide_volume": true,
+                                                                                        "support_host": "https://www.tradingview.com"
+                                }
+                            </script>
+                    </div>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
 
         </section>
-
         <!-- section right -->
         <section class="right">
             <!-- investments -->
@@ -294,15 +431,11 @@
                 </div>
                 <!-- investment var -->
                 <div class="investment">
-                    <img src="img/tesla.png" alt="inv2">
-                    <h4>Tesla</h4>
+                    <img src="img/today/Bitcoin.webp" alt="inv2">
+                    <h4>BTC</h4>
                     <div class="date-time">
-                        <p>7 Fev, 2023</p>
+                        <p>02 March, 2023</p>
                         <small class="text-muted">9:14pm</small>
-                    </div>
-                    <div class="bonds">
-                        <p>1402</p>
-                        <small class="text-muted">Bonds</small>
                     </div>
                     <div class="amount">
                         <h4>$196,81</h4>
@@ -310,15 +443,11 @@
                     </div>
                 </div>
                 <div class="investment">
-                    <img src="img/mcdonalds.png" alt="inv4">
-                    <h4>McDonalds</h4>
+                    <img src="img/today/Ethereum.webp" alt="inv4">
+                    <h4>ETH</h4>
                     <div class="date-time">
-                        <p>7 Fev, 2023</p>
-                        <small class="text-muted">9:14pm</small>
-                    </div>
-                    <div class="bonds">
-                        <p>1402</p>
-                        <small class="text-muted">Bonds</small>
+                        <p>29 Jan, 2023</p>
+                        <small class="text-muted">7:14am</small>
                     </div>
                     <div class="amount">
                         <h4>$267,34</h4>
@@ -326,31 +455,23 @@
                     </div>
                 </div>
                 <div class="investment">
-                    <img src="img/uniliver.png" alt="inv1">
-                    <h4>Uniliver</h4>
+                    <img src="img/today/BNB.webp" alt="inv1">
+                    <h4>BNB</h4>
                     <div class="date-time">
-                        <p>7 Fev, 2023</p>
-                        <small class="text-muted">9:14pm</small>
-                    </div>
-                    <div class="bonds">
-                        <p>1402</p>
-                        <small class="text-muted">Bonds</small>
+                        <p>29 Feb, 2023</p>
+                        <small class="text-muted">9:14am</small>
                     </div>
                     <div class="amount">
                         <h4>$49,57</h4>
-                        <small class="danger">-1.39%</small>
+                        <small class="success">+1.39%</small>
                     </div>
                 </div>
                 <div class="investment">
-                    <img src="img/monster.png" alt="inv3">
-                    <h4>Monster</h4>
+                    <img src="img/today/Cardano.webp" alt="inv3">
+                    <h4>ADA</h4>
                     <div class="date-time">
                         <p>7 Fev, 2023</p>
-                        <small class="text-muted">9:14pm</small>
-                    </div>
-                    <div class="bonds">
-                        <p>1402</p>
-                        <small class="text-muted">Bonds</small>
+                        <small class="text-muted">12:14pm</small>
                     </div>
                     <div class="amount">
                         <h4>$102,51</h4>
@@ -367,12 +488,14 @@
 
                 <div class="transaction">
                     <div class="service">
-                        <div class="icon bg-purple-light">
-                            <span class="material-icons-sharp purple">headset</span>
+                        <div class="icon">
+                            <span class="material-icons-sharp ">
+                                <img src="img/today/Chainlink.webp" alt="">
+                            </span>
                         </div>
                     </div>
                     <div class="details">
-                        <h4>Music</h4>
+                        <h4>Crypto</h4>
                         <p>07.02.2023</p>
                     </div>
                     <div class="card-details">
@@ -389,12 +512,12 @@
                 <div class="transaction">
                     <div class="service">
                         <div class="icon bg-purple-light">
-                            <span class="material-icons-sharp purple">shopping_bag</span>
+                            <span class="material-icons-sharp">send</span>
                         </div>
                     </div>
                     <div class="details">
-                        <h4>Shopping</h4>
-                        <p>07.02.2023</p>
+                        <h4>Send</h4>
+                        <p>02.03.2023</p>
                     </div>
                     <div class="card-details">
                         <div class="card bg-primary">
@@ -410,12 +533,12 @@
                 <div class="transaction">
                     <div class="service">
                         <div class="icon bg-success-light">
-                            <span class="material-icons-sharp success">restaurant</span>
+                            <span class="material-icons-sharp success">add</span>
                         </div>
                     </div>
                     <div class="details">
-                        <h4>Restaurant</h4>
-                        <p>07.02.2023</p>
+                        <h4>Receive</h4>
+                        <p>03.03.2023</p>
                     </div>
                     <div class="card-details">
                         <div class="card bg-dark">
@@ -426,17 +549,17 @@
                             <small class="text-muted">Credit Card</small>
                         </div>
                     </div>
-                    <h4>-$20</h4>
+                    <h4>+$20</h4>
                 </div>
                 <div class="transaction">
                     <div class="service">
                         <div class="icon bg-danger-light">
-                            <span class="material-icons-sharp danger">sports_esports</span>
+                            <span class="material-icons-sharp danger">send</span>
                         </div>
                     </div>
                     <div class="details">
-                        <h4>Games</h4>
-                        <p>07.02.2023</p>
+                        <h4>Send</h4>
+                        <p>07.03.2023</p>
                     </div>
                     <div class="card-details">
                         <div class="card bg-danger">
@@ -452,12 +575,12 @@
                 <div class="transaction">
                     <div class="service">
                         <div class="icon bg-danger-light">
-                            <span class="material-icons-sharp danger">medication</span>
+                            <span class="material-icons-sharp danger">currency_exchange</span>
                         </div>
                     </div>
                     <div class="details">
-                        <h4>Pharmacy</h4>
-                        <p>07.02.2023</p>
+                        <h4>BTC</h4>
+                        <p>07.03.2023</p>
                     </div>
                     <div class="card-details">
                         <div class="card bg-primary">
@@ -470,32 +593,23 @@
                     </div>
                     <h4>-$44</h4>
                 </div>
-                <div class="transaction">
-                    <div class="service">
-                        <div class="icon bg-success-light">
-                            <span class="material-icons-sharp success">fitness_center</span>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <h4>Fitness</h4>
-                        <p>07.02.2023</p>
-                    </div>
-                    <div class="card-details">
-                        <div class="card bg-dark">
-                            <img src="img/master card.png" alt="card1">
-                        </div>
-                        <div class="details">
-                            <p>*0765</p>
-                            <small class="text-muted">Credit Card</small>
-                        </div>
-                    </div>
-                    <h4>-$19</h4>
-                </div>
 
             </div>
         </section>
     </main>
-
+    <footer>
+        <img src="img/CryptoFy.png" class="logo">
+        <div>@ <a href="../admin/">CryptoFy </a>All right reserved <a id="openModalBtn">Terms & Conditions</a></div>
+        <div id="footer_chiled2">
+            <span>Developed by <a href="https://www.github.com/rajavat1">Aaditya Raj Singh</a></span>
+            <div><i class='bx bxl-facebook-circle'></i>
+                <i class='bx bxl-twitter'></i>
+                <i class='bx bxl-discord-alt'></i>
+                <i class='bx bxl-youtube'></i>
+                <i class='bx bxl-linkedin'></i>
+            </div>
+        </div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 

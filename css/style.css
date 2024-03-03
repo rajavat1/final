@@ -81,7 +81,7 @@
         background-color: transparent;
         border: 1px solid #999999;
         padding: 19px;
-        
+
         transition: all 0.3s ease-in-out;
     }
 }
@@ -388,5 +388,110 @@
     .roadmap-carousel {
         display: flex;
         flex-direction: column;
+    }
+}
+
+/* t&c */
+#myModal {
+    background: #000000ad;
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color: #ffffff;
+        margin: 10% auto;
+        padding: 20px;
+        width: 50%;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #ff5b5b;
+    }
+
+    /* Modal Text */
+    p {
+        font-size: 18px;
+    }
+
+    /* styles.css */
+
+    /* Reset default margin and padding */
+    body,
+    h1,
+    p,
+    ul,
+    ol,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Set default font family and background color */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    /* Container for the main content */
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Heading styles */
+    h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    /* Paragraph styles */
+    p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    /* List styles */
+    ol,
+    ul {
+        margin-left: 20px;
+    }
+
+    li {
+        color: #333;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
     }
 }

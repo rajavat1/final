@@ -60,3 +60,25 @@ function sendmail() {
         );
     }
 }
+
+//t&c
+let openModalBtn = document.getElementById("openModalBtn");
+let modal = document.getElementById("myModal");
+let closeModalBtn = document.getElementById("closeModalBtn");
+let closeModalBtn2 = document.getElementById("closeModalBtn2");
+openModalBtn.addEventListener("click", function () {
+    modal.style.display = "flex";
+});
+
+closeModalBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+});
+closeModalBtn2.addEventListener("click", function () {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});

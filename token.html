@@ -26,7 +26,77 @@
         <div class="spinner-grow text-primary" role="status"></div>
     </div> -->
     <!-- Spinner End -->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <div class="container">
+            <h1>Welcome to XYZ Crypto Exchange</h1>
+            <p>By using our platform, you agree to the following terms and conditions:</p>
+            <ol>
+                <li>Account Registration:
+                    <ul>
+                        <li>You must be at least 18 years old to create an account.</li>
+                        <li>You are responsible for maintaining the confidentiality of your account credentials.
+                        </li>
+                        <li>You agree not to share your account details with anyone else.</li>
+                    </ul>
+                </li>
+                <li>Trading and Transactions:
+                    <ul>
+                        <li>Trading cryptocurrencies involves risks. You acknowledge and accept these risks.</li>
+                        <li>We do not provide financial advice. Make informed decisions based on your own research.
+                        </li>
+                        <li>Transactions are irreversible. Double-check before confirming any trade.</li>
+                    </ul>
+                </li>
+                <li>Security:
+                    <ul>
+                        <li>Enable two-factor authentication (2FA) for added security.</li>
+                        <li>Report any suspicious activity immediately.</li>
+                        <li>We are not liable for any losses due to security breaches.</li>
+                    </ul>
+                </li>
+                <li>Legal Compliance:
+                    <ul>
+                        <li>You agree to comply with all applicable laws and regulations.</li>
+                        <li>We may request identity verification (KYC) for certain transactions.</li>
+                    </ul>
+                </li>
+                <li>Fees and Charges:
+                    <ul>
+                        <li>Review our fee schedule for details on trading fees, withdrawal fees, and other charges.
+                        </li>
+                        <li>Fees may change without prior notice.</li>
+                    </ul>
+                </li>
+                <li>Privacy:
+                    <ul>
+                        <li>Read our Privacy Policy to understand how we collect, use, and protect your data.</li>
+                        <li>We do not sell your personal information to third parties.</li>
+                    </ul>
+                </li>
+                <li>Termination::
+                    <ul>
+                        <li>We reserve the right to suspend or terminate your account for any violation of these
+                            terms.</li>
+                        <li>You can close your account at any time.</li>
+                    </ul>
+                </li>
+                <li>Disclaimer:
+                    <ul>
+                        <li>Cryptocurrency markets are volatile. We are not responsible for any financial losses.
+                        </li>
+                        <li>Use our platform at your own risk.</li>
+                    </ul>
+                </li>
+                <!-- Add other terms here -->
+            </ol>
+            <button id="closeModalBtn2" class=" btn btn-primary py-2 px-3 mt-2">Done</button>
+        </div>
 
+    </div>
+</div>
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
@@ -182,7 +252,7 @@
                     <a class="btn btn-link" href="about.html"><i class='bx bx-chevron-right'></i> About Us</a>
                     <a class="btn btn-link" href="contact.html"><i class='bx bx-chevron-right'></i> Contact Us</a>
                     <a class="btn btn-link" href="service.html"><i class='bx bx-chevron-right'></i> Our Services</a>
-                    <a class="btn btn-link" href=""><i class='bx bx-chevron-right'></i> Terms & Condition</a>
+                    <a class="btn btn-link" id="openModalBtn"><i class='bx bx-chevron-right'></i> Terms & Condition</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Follow Us</h5>

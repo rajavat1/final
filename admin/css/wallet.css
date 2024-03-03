@@ -1,0 +1,427 @@
+#Wallet_main {
+    grid-template-columns: 16rem auto;
+}
+
+#card_section {
+    margin: 10vh 0;
+
+    .cards-list {
+        z-index: 0;
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .card_4 {
+        width: 35vh;
+        height: 100%;
+        border-radius: 20px;
+        border: 1px dashed var(--color-gray-light);
+        cursor: pointer;
+        transition: 0.4s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            width: 35%;
+            height: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dotted gray;
+            border-radius: 50%;
+            font-size: 2rem;
+        }
+    }
+
+    .card {
+
+        width: 35vh;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+        cursor: pointer;
+        transition: 0.4s;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .chiled {
+            .name {
+                display: flex;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        .chiled1 {
+            display: flex;
+            flex-direction: column;
+            height: 42%;
+            width: 100%;
+            justify-content: space-between;
+
+            .subchiled1 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .name {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 30%;
+                }
+
+                h2 {
+                    color: rgb(19, 88, 19);
+                }
+            }
+        }
+
+        .chiled2 {
+            width: 100%;
+            height: 20%;
+        }
+
+        .chiled3 {
+            height: 50%;
+            width: 100%;
+
+            img {
+                object-fit: fill;
+                height: 100%;
+                width: 100%;
+                float: inline-end;
+            }
+        }
+    }
+
+
+    .card:hover {
+        transform: scale(0.98, 0.98);
+        box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+            -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+    }
+
+
+    @media all and (max-width: 500px) {
+        .card-list {
+            /* On small screens, we are no longer using row direction but column */
+            flex-direction: column;
+        }
+    }
+}
+
+#chart {
+    .balance_card {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+        padding: 20px 10px;
+
+        .chiled1 {
+            width: 30%;
+            height: 100%;
+            border-right: 1px solid var(--color-gray-light);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            .name {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            .blnc {
+                h3 {
+                    color: var(--color-gray-light);
+                    font-weight: 400;
+                }
+
+                h1 {
+                    font-size: 4rem;
+                }
+
+                h2 {
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .btns {
+                display: flex;
+                gap: 20px;
+
+                button {
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    border: none;
+                    cursor: pointer;
+
+                    &:first-child {
+                        background-color: var(--color-danger);
+                        border: 1px solid var(--color-danger);
+
+                        &:hover {
+                            background-color: transparent;
+                            border: 1px solid var(--color-danger);
+                            transition: all 0.3s ease-in-out;
+                            color: var(--color-danger);
+
+                        }
+                    }
+
+                    &:last-child {
+                        background-color: transparent;
+                        color: var(--color-danger);
+                        border: 1px solid var(--color-danger);
+
+                        &:hover {
+                            background-color: var(--color-danger);
+                            color: var(--color-white);
+                            transition: all 0.3s ease-in-out;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .chiled2 {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            .subchiled1 {
+                height: 40%;
+                width: 100%;
+
+                .values {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .values_price {
+                        width: 50%;
+                        height: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        h3 {
+                            font-weight: 500;
+                        }
+
+                        h2 {
+                            font-size: 3rem;
+                        }
+
+                        h4 {
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                        }
+                    }
+
+                    .charts {
+                        width: 50%;
+                        height: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        justify-content: space-around;
+
+                        img {
+                            width: 100%;
+                            height: 50%;
+                        }
+
+                        h3 {
+                            color: rgb(5, 102, 5);
+                        }
+                    }
+                }
+
+                .bar {
+
+                    .progress {
+                        background: var(--color-light);
+                        justify-content: flex-start;
+                        border-radius: 100px;
+                        align-items: center;
+                        position: relative;
+                        padding: 0 5px;
+                        display: flex;
+                        height: 12px;
+                        width: 500px;
+
+                    }
+
+                    .progress-value {
+                        width: 68%;
+                        box-shadow: 0 10px 40px -10px #fff;
+                        border-radius: 100px;
+                        background: blue;
+                        height: 10px;
+                    }
+
+
+
+                }
+            }
+
+            .subchiled2 {
+                height: 40%;
+                width: 100%;
+
+                .values {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .values_price {
+                        width: 50%;
+                        height: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        h3 {
+                            font-weight: 500;
+                        }
+
+                        h2 {
+                            font-size: 3rem;
+                        }
+
+                        h4 {
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                        }
+                    }
+
+                    .charts {
+                        width: 50%;
+                        height: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        justify-content: space-around;
+
+                        img {
+                            width: 100%;
+                            height: 50%;
+                        }
+
+                        h3 {
+                            color: rgb(5, 102, 5);
+                        }
+                    }
+                }
+
+                .bar {
+
+                    .progress {
+                        background: var(--color-light);
+                        justify-content: flex-start;
+                        border-radius: 100px;
+                        align-items: center;
+                        position: relative;
+                        padding: 0 5px;
+                        display: flex;
+                        height: 12px;
+                        width: 500px;
+
+                    }
+
+                    .progress-value {
+                        width: 88%;
+                        box-shadow: 0 10px 40px -10px #fff;
+                        border-radius: 100px;
+                        background: var(--color-danger);
+                        height: 10px;
+                    }
+
+
+
+                }
+            }
+        }
+    }
+
+    #btc_balance {
+        display: flex;
+    }
+
+    #eth_balance {
+
+        display: none;
+        .subchiled1 {
+            .bar {
+                .progress-value {
+                    width: 57%;
+                    box-shadow: 0 10px 40px -10px #fff;
+                    border-radius: 100px;
+                    background: blue;
+                    height: 10px;
+                }
+            }
+        }
+        .subchiled2 {
+            .bar {
+             .progress-value {
+                    width: 84%;
+                    box-shadow: 0 10px 40px -10px #fff;
+                    border-radius: 100px;
+                    background: var(--color-danger);
+                    height: 10px;
+                }
+            }
+        }
+    }
+
+    #avl_balance {
+        display: none;
+        .subchiled1 {
+            .bar {
+                .progress-value {
+                    width: 91%;
+                    box-shadow: 0 10px 40px -10px #fff;
+                    border-radius: 100px;
+                    background: blue;
+                    height: 10px;
+                }
+            }
+        }
+        .subchiled2 {
+            .bar {
+             .progress-value {
+                    width: 75%;
+                    box-shadow: 0 10px 40px -10px #fff;
+                    border-radius: 100px;
+                    background: var(--color-danger);
+                    height: 10px;
+                }
+            }
+        }
+    }
+}

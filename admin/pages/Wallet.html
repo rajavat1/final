@@ -13,15 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="shortcut icon" href="../../logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/wallet.css">
     <!-- icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
 <body>
-    <div class="spinner-wrapper">
+    <!-- <div class="spinner-wrapper">
         <div class="spinner"><img src="../../logo.ico"></img></div>
-      </div>
+    </div> -->
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -120,14 +121,14 @@
         </div>
     </nav>
     <!-- main -->
-    <main>
+    <main id="Wallet_main">
         <!-- aside -->
         <aside>
             <button id="close-btn">
                 <span class="material-icons-sharp">close</span>
             </button>
             <div class="sidebar">
-                <a href="../index.html" >
+                <a href="../index.html">
                     <span class="material-icons-sharp">dashboard</span>
                     <h4>Dashboard</h4>
                 </a>
@@ -135,7 +136,7 @@
                     <span class="material-icons-sharp">currency_exchange</span>
                     <h4>Exchange</h4>
                 </a>
-                <a href="Wallet.html"class="active">
+                <a href="Wallet.html" class="active">
                     <span class="material-icons-sharp">account_balance_wallet</span>
                     <h4>Wallet</h4>
                 </a>
@@ -162,7 +163,234 @@
             </div>
 
         </aside>
-
+        <section class="container">
+            <h1>Wallet</h1>
+            <div id="card_section">
+                <div class="cards-list">
+                    <div id="card1" class="card 1">
+                        <div class="chiled chiled1">
+                            <div class="subchiled1">
+                                <div class="name">
+                                    <img src="../img/today/Bitcoin.webp">
+                                    <h3>BTC</h3>
+                                </div>
+                                <h2>0.25%</h2>
+                            </div>
+                            <div class="subchiled2">
+                                <h2>0.2688594</h2>
+                                <h4>22,10,598 USD</h4>
+                            </div>
+                        </div>
+                        <div class="chiled chiled3">
+                            <img src="../img/today/svg/Bitcoin.svg" alt="">
+                        </div>
+                    </div>
+                    <div id="card2" class="card 2">
+                        <div class="chiled chiled1">
+                            <div class="subchiled1">
+                                <div class="name">
+                                    <img src="../img/today/Ethereum.webp">
+                                    <h3>ETH</h3>
+                                </div>
+                                <h2>15.00%</h2>
+                            </div>
+                            <div class="subchiled2">
+                                <h2>0.75025</h2>
+                                <h4>3421.52 USD</h4>
+                            </div>
+                        </div>
+                        <div class="chiled chiled3">
+                            <img src="../img/today/svg/Ethereum.svg" alt="">
+                        </div>
+                    </div>
+                    <div id="card3" class="card 3">
+                        <div class="chiled chiled1">
+                            <div class="subchiled1">
+                                <div class="name">
+                                    <img src="../img/today/Avalanche.webp">
+                                    <h3>AVL</h3>
+                                </div>
+                                <h2>27.05%</h2>
+                            </div>
+                            <div class="subchiled2">
+                                <h2>0.2688594</h2>
+                                <h4>12,09,57.00 USD</h4>
+                            </div>
+                        </div>
+                        <div class="chiled chiled3">
+                            <img src="../img/today/svg/Avalanche.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="card_4">
+                        <span class="material-icons-sharp">add</span>
+                    </div>
+                </div>
+            </div>
+            <div id="chart">
+                <div id="btc_balance" class="balance_card">
+                    <div class="chiled1">
+                        <div class="name">
+                            <img src="../img/today/Bitcoin.webp">
+                            <h1>BTC</h1>
+                        </div>
+                        <div class="blnc">
+                            <h3>Total Balance</h3>
+                            <h1>0.2688594</h1>
+                            <h2>22,10,598 USD</h2>
+                        </div>
+                        <div class="btns">
+                            <button>Withdraw</button><button>Deposit</button>
+                        </div>
+                    </div>
+                    <div class="chiled2">
+                        <div class="subchiled1">
+                            <div class="values">
+                                <div class="values_price">
+                                    <h3>Exchange Balance</h3>
+                                    <h2>0.298745</h2>
+                                    <h4>4,8526 USD</h4>
+                                </div>
+                                <div class="charts">
+                                    <img src="../img/today/svg/Bitcoin.svg">
+                                    <h3>+0.55%</h3>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <div class="progress">
+                                    <div class="progress-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subchiled2">
+                            <div class="values">
+                                <div class="values_price">
+                                    <h3>Assets Balance</h3>
+                                    <h2>0.859887</h2>
+                                    <h4>18,94743 USD</h4>
+                                </div>
+                                <div class="charts">
+                                    <img src="../img/today/svg/Bitcoin.svg">
+                                    <h3>+1.74%</h3>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <div class="progress">
+                                    <div class="progress-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="eth_balance" class="balance_card">
+                    <div class="chiled1">
+                        <div class="name">
+                            <img src="../img/today/Ethereum.webp">
+                            <h1>ETH</h1>
+                        </div>
+                        <div class="blnc">
+                            <h3>Total Balance</h3>
+                            <h1>18.78475</h1>
+                            <h2>27,10,598 USD</h2>
+                        </div>
+                        <div class="btns">
+                            <button>Withdraw</button><button>Deposit</button>
+                        </div>
+                    </div>
+                    <div class="chiled2">
+                        <div class="subchiled1">
+                            <div class="values">
+                                <div class="values_price">
+                                    <h3>Exchange Balance</h3>
+                                    <h2>1.298745</h2>
+                                    <h4>8,7496 USD</h4>
+                                </div>
+                                <div class="charts">
+                                    <img src="../img/today/svg/Bitcoin.svg">
+                                    <h3>+1.55%</h3>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <div class="progress">
+                                    <div class="progress-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subchiled2">
+                            <div class="values">
+                                <div class="values_price">
+                                    <h3>Assets Balance</h3>
+                                    <h2>10.48792</h2>
+                                    <h4>12,94743 USD</h4>
+                                </div>
+                                <div class="charts">
+                                    <img src="../img/today/svg/Bitcoin.svg">
+                                    <h3>+2.74%</h3>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <div class="progress">
+                                    <div class="progress-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="avl_balance" class="balance_card">
+                    <div class="chiled1">
+                        <div class="name">
+                            <img src="../img/today/Avalanche.webp">
+                            <h1>AVL</h1>
+                        </div>
+                        <div class="blnc">
+                            <h3>Total Balance</h3>
+                            <h1>7.258000</h1>
+                            <h2>78.9587 USD</h2>
+                        </div>
+                        <div class="btns">
+                            <button>Withdraw</button><button>Deposit</button>
+                        </div>
+                    </div>
+                    <div class="chiled2">
+                        <div class="subchiled1">
+                            <div class="values">
+                                <div class="values_price">
+                                    <h3>Exchange Balance</h3>
+                                    <h2>10.278745</h2>
+                                    <h4>40,88260 USD</h4>
+                                </div>
+                                <div class="charts">
+                                    <img src="../img/today/svg/Avalanche.svg">
+                                    <h3>+09.55%</h3>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <div class="progress">
+                                    <div class="progress-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subchiled2">
+                            <div class="values">
+                                <div class="values_price">
+                                    <h3>Assets Balance</h3>
+                                    <h2>0.859887</h2>
+                                    <h4>18,94743 USD</h4>
+                                </div>
+                                <div class="charts">
+                                    <img src="../img/today/svg/BNB.svg">
+                                    <h3>+21.74%</h3>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <div class="progress">
+                                    <div class="progress-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
@@ -182,6 +410,7 @@
         </div>
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/wallet.js"></script>
 </body>
 
 </html>

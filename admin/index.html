@@ -19,6 +19,9 @@
 </head>
 
 <body>
+    <div class="spinner-wrapper ">
+        <div class="spinner"><img src="../logo.ico"></img></div>
+      </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -116,46 +119,43 @@
             </div>
         </div>
     </nav>
-
     <!-- main -->
-
     <main>
-
         <!-- aside -->
         <aside>
             <button id="close-btn">
                 <span class="material-icons-sharp">close</span>
             </button>
             <div class="sidebar">
-                <a href="#" class="active">
+                <a href="/admin/" class="active">
                     <span class="material-icons-sharp">dashboard</span>
                     <h4>Dashboard</h4>
                 </a>
-                <a href="#">
+                <a href="pages/Exchange.html">
                     <span class="material-icons-sharp">currency_exchange</span>
                     <h4>Exchange</h4>
                 </a>
-                <a href="#">
+                <a href="pages/Wallet.html">
                     <span class="material-icons-sharp">account_balance_wallet</span>
                     <h4>Wallet</h4>
                 </a>
-                <a href="#">
+                <a href="pages/Transactions.html">
                     <span class="material-icons-sharp">payment</span>
                     <h4>Transactions</h4>
                 </a>
-                <a href="#">
+                <a href="pages/Analytics.html">
                     <span class="material-icons-sharp">pie_chart</span>
                     <h4>Analytics</h4>
                 </a>
-                <a href="#">
+                <a href="pages/Messages.html">
                     <span class="material-icons-sharp">insert_comment</span>
                     <h4>Messages</h4>
                 </a>
-                <a href="#">
+                <a href="pages/Help.html">
                     <span class="material-icons-sharp">help_center</span>
                     <h4>Help Center</h4>
                 </a>
-                <a href="#">
+                <a href="pages/Settings.html">
                     <span class="material-icons-sharp">settings</span>
                     <h4>Settings</h4>
                 </a>
@@ -427,7 +427,7 @@
             <div class="investments">
                 <div class="header">
                     <h2>Investments</h2>
-                    <a href="#">More <span class="material-icons-sharp">chevron_right</span></a>
+                    <a href="pages/Wallet.html">More <span class="material-icons-sharp">chevron_right</span></a>
                 </div>
                 <!-- investment var -->
                 <div class="investment">
@@ -483,7 +483,7 @@
             <div class="recent-transactions">
                 <div class="header">
                     <h2>Recent Transactions</h2>
-                    <a href="#">More <span class="material-icons-sharp">chevron_right</span></a>
+                    <a href="pages/Transactions.html">More <span class="material-icons-sharp">chevron_right</span></a>
                 </div>
 
                 <div class="transaction">
@@ -611,6 +611,7 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/chart.js"></script>
 </body>
 
 </html>

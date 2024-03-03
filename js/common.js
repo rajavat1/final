@@ -1,3 +1,8 @@
+//loader
+window.onload = function () {
+    document.querySelector('#spinner').classList.remove("show");
+  };
+
 //manu
 
 var collapse = document.getElementById("collapse");

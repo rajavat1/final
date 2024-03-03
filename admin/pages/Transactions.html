@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoFy- Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="shortcut icon" href="../../logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="spinner-wrapper">
+        <div class="spinner"><img src="../../logo.ico"></img></div>
+      </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <div class="container">
+                <h1>Welcome to XYZ Crypto Exchange</h1>
+                <p>By using our platform, you agree to the following terms and conditions:</p>
+                <ol>
+                    <li><b>Account Registration:</b>
+                        <ul>
+                            <li>You must be at least 18 years old to create an account.</li>
+                            <li>You are responsible for maintaining the confidentiality of your account credentials.
+                            </li>
+                            <li>You agree not to share your account details with anyone else.</li>
+                        </ul>
+                    </li>
+                    <li><b>Trading and Transactions:</b>
+                        <ul>
+                            <li>Trading cryptocurrencies involves risks. You acknowledge and accept these risks.</li>
+                            <li>We do not provide financial advice. Make informed decisions based on your own research.
+                            </li>
+                            <li>Transactions are irreversible. Double-check before confirming any trade.</li>
+                        </ul>
+                    </li>
+                    <li><b>Security:</b>
+                        <ul>
+                            <li>Enable two-factor authentication (2FA) for added security.</li>
+                            <li>Report any suspicious activity immediately.</li>
+                            <li>We are not liable for any losses due to security breaches.</li>
+                        </ul>
+                    </li>
+                    <li><b>Legal Compliance:</b>
+                        <ul>
+                            <li>You agree to comply with all applicable laws and regulations.</li>
+                            <li>We may request identity verification (KYC) for certain transactions.</li>
+                        </ul>
+                    </li>
+                    <li><b>Fees and Charges:</b>
+                        <ul>
+                            <li>Review our fee schedule for details on trading fees, withdrawal fees, and other charges.
+                            </li>
+                            <li>Fees may change without prior notice.</li>
+                        </ul>
+                    </li>
+                    <li><b>Privacy:</b>
+                        <ul>
+                            <li>Read our Privacy Policy to understand how we collect, use, and protect your data.</li>
+                            <li>We do not sell your personal information to third parties.</li>
+                        </ul>
+                    </li>
+                    <li><b>Termination:</b>
+                        <ul>
+                            <li>We reserve the right to suspend or terminate your account for any violation of these
+                                terms.</li>
+                            <li>You can close your account at any time.</li>
+                        </ul>
+                    </li>
+                    <li><b>Disclaimer:</b>
+                        <ul>
+                            <li>Cryptocurrency markets are volatile. We are not responsible for any financial losses.
+                            </li>
+                            <li>Use our platform at your own risk.</li>
+                        </ul>
+                    </li>
+                    <!-- Add other terms here -->
+                </ol>
+                <button id="closeModalBtn2" class=" btn btn-primary py-2 px-3 mt-2">Done</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- navbar -->
+    <nav>
+        <div class="container">
+            <img src="../img/CryptoFy.png" class="logo" alt="logo">
+            <div class="search-bar">
+                <span class="material-icons-sharp">search</span>
+                <input type="search" placeholder="Search">
+            </div>
+            <div class="profile-area">
+                <div class="theme-btn">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="profile-photo">
+                        <img src="../img/profile-1.png" alt="profile1">
+                    </div>
+                    <h5>William</h5>
+                    <span class="material-icons-sharp">expand_more</span>
+                </div>
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- main -->
+    <main>
+        <!-- aside -->
+        <aside>
+            <button id="close-btn">
+                <span class="material-icons-sharp">close</span>
+            </button>
+            <div class="sidebar">
+                <a href="../index.html" >
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h4>Dashboard</h4>
+                </a>
+                <a href="Exchange.html">
+                    <span class="material-icons-sharp">currency_exchange</span>
+                    <h4>Exchange</h4>
+                </a>
+                <a href="Wallet.html">
+                    <span class="material-icons-sharp">account_balance_wallet</span>
+                    <h4>Wallet</h4>
+                </a>
+                <a href="Transactions.html" class="active">
+                    <span class="material-icons-sharp">payment</span>
+                    <h4>Transactions</h4>
+                </a>
+                <a href="Analytics.html">
+                    <span class="material-icons-sharp">pie_chart</span>
+                    <h4>Analytics</h4>
+                </a>
+                <a href="Messages.html">
+                    <span class="material-icons-sharp">insert_comment</span>
+                    <h4>Messages</h4>
+                </a>
+                <a href="Help.html">
+                    <span class="material-icons-sharp">help_center</span>
+                    <h4>Help Center</h4>
+                </a>
+                <a href="Settings.html">
+                    <span class="material-icons-sharp">settings</span>
+                    <h4>Settings</h4>
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+
+    </main>
+    <footer>
+        <img src="../img/CryptoFy.png" class="logo">
+        <div>@ <a href="../../admin">CryptoFy </a>All right reserved <a id="openModalBtn">Terms & Conditions</a></div>
+        <div id="footer_chiled2">
+            <span>Developed by <a href="https://www.github.com/rajavat1">Aaditya Raj Singh</a></span>
+            <div><i class='bx bxl-facebook-circle'></i>
+                <i class='bx bxl-twitter'></i>
+                <i class='bx bxl-discord-alt'></i>
+                <i class='bx bxl-youtube'></i>
+                <i class='bx bxl-linkedin'></i>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

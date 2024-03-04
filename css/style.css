@@ -15,8 +15,153 @@
     z-index: 99;
 }
 
+#facts {
+    cursor: none;
+}
+
+#facts>.cursor {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.38);
+    display: none;
+    /* opacity: 0.8; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.57);
+    backdrop-filter: blur(0.6px);
+
+}
 
 
+/* emoji */
+#main_emoji_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fbf6e6;
+    height: 50vh;
+
+    #smile {
+        height: 100%;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #emoji_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 12.25rem;
+            height: 12.25rem;
+
+
+            button {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                outline: none;
+                border: 0;
+                vertical-align: middle;
+            }
+
+            button.face-button {
+                width: 12.25rem;
+                height: 12.25rem;
+                border-radius: 50%;
+                background: #fdda5f;
+                box-shadow: inset 2px -4px 18px #fd9744;
+            }
+
+            .face-container {
+                position: relative;
+                display: block;
+                width: 40px;
+                height: 20px;
+                margin: auto;
+            }
+
+            .eye {
+                position: absolute;
+                height: 0.9rem;
+                width: 0.9rem;
+                background: #2a2927;
+                border-radius: 50%;
+                -webkit-animation: eyeBlink 3200ms linear infinite;
+                animation: eyeBlink 3200ms linear infinite;
+            }
+
+            .eye.left {
+                left: -1rem;
+            }
+
+            .eye.right {
+                left: 3rem;
+            }
+
+            .mouth {
+                position: absolute;
+                top: 2.225rem;
+                left: 0.9rem;
+                width: 1rem;
+                height: 0.125rem;
+                background: #2a2927;
+                border-radius: 0;
+            }
+
+            .eye,
+            .mouth {
+                box-shadow: inset 2px 4px 8px #121110;
+            }
+
+            .face-button:hover .mouth,
+            .face-button:active .mouth {
+                left: 1rem;
+                width: 0.9rem;
+                height: 0.8rem;
+                border-radius: 1rem 1rem 0.125rem 0.125rem;
+            }
+
+            .face-button:hover .eye,
+            .face-button:active .eye {
+                height: 0.475rem;
+                width: 0.475rem;
+                box-shadow: 0 0 0 0.25rem #fff;
+            }
+
+            @-webkit-keyframes eyeBlink {
+
+                0%,
+                30%,
+                36%,
+                100% {
+                    transform: scale(1);
+                }
+
+                32%,
+                34% {
+                    transform: scale(1, 0);
+                }
+            }
+
+            @keyframes eyeBlink {
+
+                0%,
+                30%,
+                36%,
+                100% {
+                    transform: scale(1);
+                }
+
+                32%,
+                34% {
+                    transform: scale(1, 0);
+                }
+            }
+        }
+    }
+}
 
 /*** Spinner ***/
 #spinner {
@@ -372,12 +517,16 @@
 }
 
 @keyframes animi {
-    from {
+    0% {
         scale: 1;
     }
 
-    to {
+    50% {
         scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
     }
 }
 
@@ -394,6 +543,7 @@
 /* t&c */
 #myModal {
     background: #000000ad;
+
     /* The Modal (background) */
     .modal {
         display: none;

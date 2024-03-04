@@ -98,3 +98,73 @@ toggleCollapse("headingThree", "collapseThree", "btn3");
 toggleCollapse("headingFour", "collapseFour", "btn4");
 toggleCollapse("headingFive", "collapseFive", "btn5");
 toggleCollapse("headingSix", "collapseSix", "btn6");
+
+
+// Get the cursor element
+const cursor = document.querySelector(".cursor");
+const facts = document.querySelector("#facts");
+
+// Add a mousemove event listener to the facts element
+facts.addEventListener("mouseenter", (e) => {
+    console.log(e);
+    facts.addEventListener("mousemove", (e) => {
+        // Set the cursor position based on mouse coordinates
+        cursor.style.display = "block";
+        cursor.style.top = `${e.clientY - 25}px`;
+        cursor.style.left = `${e.screenX}px`;
+    });
+});
+
+// Add a mouseout event listener to reset the cursor position
+facts.addEventListener("mouseleave", () => {
+    cursor.style.display = 'none';
+});
+
+//FACE
+const faceButton = document.querySelector('.face-button');
+const faceContainer = document.querySelector('.face-container');
+const containerCoords = document.querySelector('#emoji_container');
+const smile = document.querySelector('#smile');
+const mouseCoords = containerCoords.getBoundingClientRect();
+
+smile.addEventListener('mousemove', function (e) {
+    const mouseX = e.pageX - containerCoords.offsetLeft;
+    const mouseY = e.pageY - containerCoords.offsetTop;
+
+    TweenMax.to(faceButton, 0.3, {
+        x: (mouseX - mouseCoords.width / 2) / mouseCoords.width * 50,
+        y: (mouseY - mouseCoords.height / 2) / mouseCoords.width * 50,
+        ease: Power4.easeOut
+    })
+});
+
+smile.addEventListener('mousemove', function (e) {
+    const mouseX = e.pageX - containerCoords.offsetLeft;
+    const mouseY = e.pageY - containerCoords.offsetTop;
+
+    TweenMax.to(faceContainer, 0.3, {
+        x: (mouseX - mouseCoords.width / 2) / mouseCoords.width * 25,
+        y: (mouseY - mouseCoords.height / 2) / mouseCoords.width * 25,
+        ease: Power4.easeOut
+    })
+});
+
+smile.addEventListener('mouseenter', function (e) {
+    TweenMax.to(faceButton, 0.3, {
+        scale: 0.975
+    })
+});
+
+smile.addEventListener('mouseleave', function (e) {
+    TweenMax.to(faceButton, 0.3, {
+        x: 0,
+        y: 0,
+        scale: 1
+    })
+
+    TweenMax.to(faceContainer, 0.3, {
+        x: 0,
+        y: 0,
+        scale: 1
+    })
+});

@@ -1,4 +1,14 @@
 #Wallet_main {
+    overflow-y: hidden;
+}
+
+.container {
+    overflow-y: hidden;
+    width: 100%;
+
+}
+
+#Wallet_main {
     grid-template-columns: 16rem auto;
 }
 
@@ -112,12 +122,7 @@
     }
 
 
-    @media all and (max-width: 500px) {
-        .card-list {
-            /* On small screens, we are no longer using row direction but column */
-            flex-direction: column;
-        }
-    }
+
 }
 
 #chart {
@@ -375,6 +380,7 @@
     #eth_balance {
 
         display: none;
+
         .subchiled1 {
             .bar {
                 .progress-value {
@@ -386,9 +392,10 @@
                 }
             }
         }
+
         .subchiled2 {
             .bar {
-             .progress-value {
+                .progress-value {
                     width: 84%;
                     box-shadow: 0 10px 40px -10px #fff;
                     border-radius: 100px;
@@ -401,6 +408,7 @@
 
     #avl_balance {
         display: none;
+
         .subchiled1 {
             .bar {
                 .progress-value {
@@ -412,9 +420,10 @@
                 }
             }
         }
+
         .subchiled2 {
             .bar {
-             .progress-value {
+                .progress-value {
                     width: 75%;
                     box-shadow: 0 10px 40px -10px #fff;
                     border-radius: 100px;
@@ -422,6 +431,63 @@
                     height: 10px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    #Wallet_main {
+        grid-template-columns: 1fr;
+    }
+
+    #chart {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #card_section {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding: 20px 20px;
+
+        .cards-list {
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 20px;
+
+        }
+    }
+
+    #chart {
+        .balance_card {
+            .chiled1 {
+                .blnc {
+                    h1 {
+                        font-size: 2.5rem;
+                    }
+
+                    h2 {
+                        font-size: 1.2rem;
+                    }
+
+                    h3 {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    .balance_card {
+        .chile1 {
+            width: 50%;
+        }
+        .chile2 {
+            width: 50%;
         }
     }
 }

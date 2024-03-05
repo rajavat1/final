@@ -14,6 +14,9 @@
 
 #card_section {
     margin: 10vh 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px 20px;
 
     .cards-list {
         z-index: 0;
@@ -22,10 +25,12 @@
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .card_4 {
-        width: 35vh;
+        width: 20vw;
         height: 100%;
         border-radius: 20px;
         border: 1px dashed var(--color-gray-light);
@@ -49,7 +54,7 @@
 
     .card {
 
-        width: 35vh;
+        width: 20vw;
         height: 100%;
         border-radius: 20px;
         box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
@@ -436,6 +441,14 @@
 }
 
 @media screen and (max-width: 1025px) {
+    #card_section {
+        .cards-list {
+            .card{
+                width: 30vw;
+            }
+
+        }
+    }
     #Wallet_main {
         grid-template-columns: 1fr;
     }
@@ -455,6 +468,9 @@
             flex-direction: column;
             gap: 20px;
             padding: 0 20px;
+            .card{
+                width: 25vw;
+            }
 
         }
     }
@@ -486,6 +502,7 @@
         .chile1 {
             width: 50%;
         }
+
         .chile2 {
             width: 50%;
         }

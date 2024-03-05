@@ -5,7 +5,8 @@ const msgerChat = get(".msger-chat");
 const BOT_MSGS = [
 "Hi, how are you?",
 "Ohh... I can't understand what you trying to say. Sorry!",
-"I like to play games... But I don't know how to play!",
+"I can Understand hear is a link => https://github.com/rajavat1/final",
+"For more information click this link => https://github.com/rajavat1",
 "Sorry if my answers are not relevant. :))",
 "I feel sleepy! :("];
 

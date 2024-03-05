@@ -13,14 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="shortcut icon" href="../../logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/exchange.css">
     <!-- icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
-<body><div class="spinner-wrapper">
-    <div class="spinner"><img src="../../logo.ico"></img></div>
-  </div>
+<body>
+    <div class="spinner-wrapper">
+        <div class="spinner"><img src="../../logo.ico"></img></div>
+    </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -126,7 +128,7 @@
                 <span class="material-icons-sharp">close</span>
             </button>
             <div class="sidebar">
-                <a href="../index.html" >
+                <a href="../index.html">
                     <span class="material-icons-sharp">dashboard</span>
                     <h4>Dashboard</h4>
                 </a>
@@ -163,7 +165,172 @@
         </aside>
 
 
+        <section>
+            <div class="container">
+                <div class="currency">
+                    <select name="" id="input_currency">
+                        <option value="BTC">Bitcoin</option>
+                        <option value="ETH">Ethereum</option>
+                        <option value="USDT">Tether</option>
+                        <option value="DOT">Polkadot</option>
+                        <option value="XRP">XRP</option>
+                        <option value="ADA">Cardano</option>
+                        <option value="LTC">Litecoin</option>
+                        <option value="BCH">Bitcoin Cash</option>
+                        <option value="LINK">Chainlink</option>
+                        <option value="XLM">Stellar</option>
+                        <option value="BNB">Binance Coin</option>
+                        <option value="USDC">USD Coin</option>
+                        <option value="WBTC">Wrapped Bitcoin</option>
+                        <option value="BSV">Bitcoin SV</option>
+                        <option value="XMR">Monero</option>
+                        <option value="EOS">EOS</option>
+                        <option value="UNI">Uniswap</option>
+                        <option value="AAVE">Aave</option>
+                        <option value="TRX">TRON</option>
+                        <option value="XTZ">Tezos</option>
+                        <option value="XEM">NEM</option>
+                        <option value="THETA">THETA</option>
+                        <option value="ATOM">Cosmos</option>
+                        <option value="ICP">Internet Computer</option>
+                        <option value="VET">VeChain</option>
+                        <option value="CRO">Crypto.com Coin</option>
+                        <option value="NEO">Neo</option>
+                        <option value="SNX">Synthetix</option>
+                        <option value="MKR">Maker</option>
+                        <option value="DAI">Dai</option>
+                        <option value="LEO">UNUS SED LEO</option>
+                        <option value="DASH">Dash</option>
+                        <option value="IOTA">IOTA</option>
+                        <option value="DOGE">Dogecoin</option>
+                        <option value="HT">Huobi Token</option>
+                        <option value="BUSD">Binance USD</option>
+                        <option value="CEL">Celsius</option>
+                        <option value="ZEC">Zcash</option>
+                        <option value="YFI">yearn.finance</option>
+                        <option value="FIL">Filecoin</option>
+                        <option value="FTT">FTX Token</option>
+                        <option value="SOL">Solana</option>
+                        <option value="AVAX">Avalanche</option>
+                        <option value="REV">Revain</option>
+                        <option value="ETC">Ethereum Classic</option>
+                        <option value="SUSHI">SushiSwap</option>
+                        <option value="KSM">Kusama</option>
+                        <option value="ZIL">Zilliqa</option>
+                        <option value="WAVES">Waves</option>
+                        <option value="UMA">UMA</option>
+                        <option value="DCR">Decred</option>
+                        <option value="ALGO">Algorand</option>
+                        <option value="GRT">The Graph</option>
+                        <option value="EGLD">Elrond</option>
+                        <option value="HEDG">HedgeTrade</option>
+                        <option value="OMG">OMG Network</option>
+                        <option value="ONT">Ontology</option>
+                        <option value="LRC">Loopring</option>
+                        <option value="REN">Ren</option>
+                        <option value="RENBTC">renBTC</option>
+                        <option value="NANO">Nano</option>
+                        <option value="NEAR">NEAR Protocol</option>
+                        <option value="LUNA">Terra</option>
+                        <option value="ICX">ICON</option>
+                        <option value="RSR">Reserve Rights</option>
+                        <option value="ZRX">0x</option>
+                        <option value="HBAR">Hedera Hashgraph</option>
+                        <option value="BAT">Basic Attention Token</option>
+                        <option value="TUSD">TrueUSD</option>
+                        <option value="DGB">DigiByte</option>
 
+                    </select>
+                    <input type="number" name="" id="input_amount" value="1">
+                </div>
+                <button id="exchange">
+                    ↕
+                </button>
+                <div class="currency">
+                    <select name="" id="output_currency">
+                        <option value="BTC">Bitcoin</option>
+                        <option value="ETH">Ethereum</option>
+                        <option value="USDT">Tether</option>
+                        <option value="DOT">Polkadot</option>
+                        <option value="XRP">XRP</option>
+                        <option value="ADA">Cardano</option>
+                        <option value="LTC">Litecoin</option>
+                        <option value="BCH">Bitcoin Cash</option>
+                        <option value="LINK">Chainlink</option>
+                        <option value="XLM">Stellar</option>
+                        <option value="BNB">Binance Coin</option>
+                        <option value="USDC">USD Coin</option>
+                        <option value="WBTC">Wrapped Bitcoin</option>
+                        <option value="BSV">Bitcoin SV</option>
+                        <option value="XMR">Monero</option>
+                        <option value="EOS">EOS</option>
+                        <option value="UNI">Uniswap</option>
+                        <option value="AAVE">Aave</option>
+                        <option value="TRX">TRON</option>
+                        <option value="XTZ">Tezos</option>
+                        <option value="XEM">NEM</option>
+                        <option value="THETA">THETA</option>
+                        <option value="ATOM">Cosmos</option>
+                        <option value="ICP">Internet Computer</option>
+                        <option value="VET">VeChain</option>
+                        <option value="CRO">Crypto.com Coin</option>
+                        <option value="NEO">Neo</option>
+                        <option value="SNX">Synthetix</option>
+                        <option value="MKR">Maker</option>
+                        <option value="DAI">Dai</option>
+                        <option value="LEO">UNUS SED LEO</option>
+                        <option value="DASH">Dash</option>
+                        <option value="IOTA">IOTA</option>
+                        <option value="DOGE">Dogecoin</option>
+                        <option value="HT">Huobi Token</option>
+                        <option value="BUSD">Binance USD</option>
+                        <option value="CEL">Celsius</option>
+                        <option value="ZEC">Zcash</option>
+                        <option value="YFI">yearn.finance</option>
+                        <option value="FIL">Filecoin</option>
+                        <option value="FTT">FTX Token</option>
+                        <option value="SOL">Solana</option>
+                        <option value="AVAX">Avalanche</option>
+                        <option value="REV">Revain</option>
+                        <option value="ETC">Ethereum Classic</option>
+                        <option value="SUSHI">SushiSwap</option>
+                        <option value="KSM">Kusama</option>
+                        <option value="ZIL">Zilliqa</option>
+                        <option value="WAVES">Waves</option>
+                        <option value="UMA">UMA</option>
+                        <option value="DCR">Decred</option>
+                        <option value="ALGO">Algorand</option>
+                        <option value="GRT">The Graph</option>
+                        <option value="EGLD">Elrond</option>
+                        <option value="HEDG">HedgeTrade</option>
+                        <option value="OMG">OMG Network</option>
+                        <option value="ONT">Ontology</option>
+                        <option value="LRC">Loopring</option>
+                        <option value="REN">Ren</option>
+                        <option value="RENBTC">renBTC</option>
+                        <option value="NANO">Nano</option>
+                        <option value="NEAR">NEAR Protocol</option>
+                        <option value="LUNA">Terra</option>
+                        <option value="ICX">ICON</option>
+                        <option value="RSR">Reserve Rights</option>
+                        <option value="ZRX">0x</option>
+                        <option value="HBAR">Hedera Hashgraph</option>
+                        <option value="BAT">Basic Attention Token</option>
+                        <option value="TUSD">TrueUSD</option>
+                        <option value="DGB">DigiByte</option>
+                        <option value="OKB">OK
+
+                    </select>
+                    <input type="number" name="" id="output_amount" placeholder="0" />
+                </div>
+                <div class="result">
+                    <div class="rate" id="rate"></div>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
     </main>
@@ -181,6 +348,7 @@
         </div>
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/exchange.js"></script>
 </body>
 
 </html>

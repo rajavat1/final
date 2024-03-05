@@ -20,15 +20,6 @@ const btnCancel = document.querySelector(".btn-cancel");
 const savedP = document.querySelector(".savedP");
 
 
-closeBox.addEventListener("click", () => {
-    container.classList.remove("open");
-    container.classList.add("close");
-    setTimeout(() => {
-        container.classList.remove("close");
-        container.classList.add("open");
-    }, 1500)
-})
-
 select.addEventListener("change", function () {
     const selectedValue = select.value;
 

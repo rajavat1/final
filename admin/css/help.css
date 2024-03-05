@@ -1,0 +1,115 @@
+main {
+    grid-template-columns: 16rem auto;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+
+    .help_center_div {
+        flex: 0 0 auto;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+
+        h1 {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+#ticketBoxCenter {
+    label {
+        font-size: 1.5rem;
+        color: var(--color-dark);
+    }
+
+    input,
+    select,
+    textarea {
+        margin: 10px 0;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto
+}
+.btn{
+    padding: 10px 20px;
+    background: aqua;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center !important
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.mt-3 {
+    margin-top: 1rem !important
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    background-clip: padding-box;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 1
+}
+
+#ticketBox {
+    padding: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#ticketBoxTwo {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.input-group-prepend{
+    display: flex;
+    input{
+        border-radius: 10px;
+    }
+}
+#ticketStatus,#errMsg{
+    font-size: 16px;
+}
+
+#confirmation {
+    display: none;
+    font-size: 1.2rem;
+}
+
+#goBack {
+    display: none;
+}
+
+#deleteTicket {
+    display: none;
+}
+
+#closeTicket {
+    display: none;
+}

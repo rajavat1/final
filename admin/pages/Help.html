@@ -13,14 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="shortcut icon" href="../../logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/help.css">
     <!-- icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
-<body><div class="spinner-wrapper">
-    <div class="spinner"><img src="../../logo.ico"></img></div>
-  </div>
+<body>
+    <div class="spinner-wrapper">
+        <div class="spinner"><img src="../../logo.ico"></img></div>
+    </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -126,7 +128,7 @@
                 <span class="material-icons-sharp">close</span>
             </button>
             <div class="sidebar">
-                <a href="../index.html" >
+                <a href="../index.html">
                     <span class="material-icons-sharp">dashboard</span>
                     <h4>Dashboard</h4>
                 </a>
@@ -150,7 +152,7 @@
                     <span class="material-icons-sharp">insert_comment</span>
                     <h4>Messages</h4>
                 </a>
-                <a href="Help.html"class="active">
+                <a href="Help.html" class="active">
                     <span class="material-icons-sharp">help_center</span>
                     <h4>Help Center</h4>
                 </a>
@@ -161,7 +163,60 @@
             </div>
 
         </aside>
+        <section id="help_section">
+            <div class="container">
+                <div class="row">
+                    <div class="help_center_div">
+                        <h1>Help Desk</h1>
+                        <div id="ticketBox">
+                            <div id="ticketBoxCenter">
+                                <label class="mt-3">Issue</label>
+                                <input id="mainIssue" class="form-control">
+                                <label class="mt-3">Severity</label>
+                                <select id="severity" class="form-control">
+                                    <option>Low</option>
+                                    <option>Normal</option>
+                                    <option>High</option>
+                                    <option>Urgent</option>
+                                </select>
+                                <label class="mt-3">Error ID</label>
+                                <input id="employeeId" class="form-control" type="number">
+                                <label class="mt-3">Details</label>
+                                <textarea id="details" class="form-control" rows="2"></textarea>
+                                <div class="text-center">
+                                    <p id="errMsg" class="text-center mt-2"></p>
+                                    <button id="submitTicket" class="btn btn-secondary text-center mt-2">Submit</button>
+                                </div>
+                            </div>
+                            <p id="confirmation" class="text-center"></p>
+                            <div class="text-center">
+                                <button id="goBack" class="btn btn-secondary mt-3">Go Back</button>
+                            </div>
+                        </div>
 
+                        <!--Ticket Status-->
+                        <div id="ticketBoxTwo" class="mt-4">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button id="searchTicketButton" class="btn btn-secondary"
+                                        type="button">Search</button>
+                                    <input id="searchTicketInput" type="number" class="form-control"
+                                        placeholder="Ticket Number" aria-label="Example text with button addon">
+                                </div>
+                            </div>
+                            <p class="ticket text-center"></p>
+                            <p id="ticketStatus" class="text-center"></p>
+                            <div class="text-center">
+                                <button id="closeTicket" class="btn btn-primary mt-3" type="submit">Close</button>
+                                <button id="deleteTicket" class="btn btn-danger mt-3" type="submit">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
 
 
 
@@ -181,6 +236,7 @@
         </div>
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/help.js"></script>
 </body>
 
 </html>

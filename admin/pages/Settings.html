@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="shortcut icon" href="../../logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/setting.css">
     <!-- icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -21,7 +22,7 @@
 <body>
     <div class="spinner-wrapper">
         <div class="spinner"><img src="../../logo.ico"></img></div>
-      </div>
+    </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -127,7 +128,7 @@
                 <span class="material-icons-sharp">close</span>
             </button>
             <div class="sidebar">
-                <a href="../index.html" >
+                <a href="../index.html">
                     <span class="material-icons-sharp">dashboard</span>
                     <h4>Dashboard</h4>
                 </a>
@@ -162,7 +163,60 @@
             </div>
 
         </aside>
+        <section id="setting_page">
+            <div class="container">
+                <nav>
+                    <h1 class="settingsP">Settings</h1>
+                </nav>
+                <div class="main">
+                    <div class="above-hr">
+                        <h5 class="languageP">Language</h5>
+                        <p class="languagePP">Let us know which language you're most comfortable using. You can change
+                            it back at any time.</p>
+                        <div class="language-box">
+                            <select name="" id="">
+                                <option value="EN" class="option1">English</option>
+                                <option value="IT" class="option2">Italian</option>
+                                <option value="ES" class="option3">Spanish</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="under-hr">
+                        <div class="autoplay-box">
+                            <div class="autoplay-caption">
+                                <h5 class="autoplayP">Autoplay videos</h5>
+                                <p class="autoplayPP">Choose if you want to autoplay in your browser.</p>
+                            </div>
+                            <div class="slide1">
+                                <input type="checkbox" value="None" id="slide1" name="check" checked />
+                                <label for="slide1"></label>
+                            </div>
+                        </div>
+                        <div class="showphotos-box">
+                            <div class="showphotos-caption">
+                                <h5 class="showP">Show profile photos</h5>
+                                <p class="showPP">Choose whether to show or hide profile photos at other members.</p>
+                            </div>
+                            <div class="slide2">
+                                <input type="checkbox" value="None" id="slide2" name="check" checked />
+                                <label for="slide2"></label>
+                            </div>
+                        </div>
+                        <div class="btns-box">
+                            <button class="btn-save">Save</button>
+                            <button class="btn-cancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="saved-box">
+                    <p class="savedP">Saved!</p>
+                </div>
+            </div>
 
+
+            <script src="script.js"></script>
+        </section>
 
 
 
@@ -182,6 +236,7 @@
         </div>
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/setting.js"></script>
 </body>
 
 </html>

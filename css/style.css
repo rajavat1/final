@@ -519,14 +519,17 @@
 @keyframes animi {
     0% {
         scale: 1;
+        rotate: -10deg;
     }
 
     50% {
         scale: 1.1;
+        rotate: 10deg;
     }
 
     100% {
         scale: 1;
+        rotate: -10deg;
     }
 }
 

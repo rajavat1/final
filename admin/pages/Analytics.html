@@ -13,14 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="shortcut icon" href="../../logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/analytics.css">
     <!-- icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
-<body><div class="spinner-wrapper">
-    <div class="spinner show"><img src="../../logo.ico"></img></div>
-  </div>
+<body>
+    <div class="spinner-wrapper">
+        <div class="spinner show"><img src="../../logo.ico"></img></div>
+    </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -162,7 +164,118 @@
 
         </aside>
 
+        <section id="analytics_container" class="container">
+            <div><!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                            {
+                                "symbols": [
+                                    {
+                                        "description": "",
+                                        "proName": "BITSTAMP:BTCUSD"
+                                    },
+                                    {
+                                        "description": "",
+                                        "proName": "BINANCE:BTCUSDT"
+                                    },
+                                    {
+                                        "description": "",
+                                        "proName": "EASYMARKETS:DOGUSD"
+                                    },
+                                    {
+                                        "description": "",
+                                        "proName": "BITSTAMP:ETHUSD"
+                                    },
+                                    {
+                                        "description": "",
+                                        "proName": "COINBASE:SOLUSD"
+                                    },
+                                    {
+                                        "description": "",
+                                        "proName": "CRYPTOCAP:USDT.D"
+                                    },
+                                    {
+                                        "description": "",
+                                        "proName": "BINANCE:LTCUSDT"
+                                    },
+                                    {
+                                        "description": "",
+                                        "proName": "BINANCE:FTMUSDT"
+                                    }
+                                ],
+                                    "showSymbolLogo": true,
+                                        "isTransparent": false,
+                                            "displayMode": "regular",
+                                                "colorTheme": "light",
+                                                    "locale": "in"
+                            }
+                        </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+            <div ><!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                            {
+                                "symbols": [
+                                    {
+                                        "proName": "FOREXCOM:SPXUSD",
+                                        "title": "S&P 500 Index"
+                                    },
+                                    {
+                                        "proName": "FOREXCOM:NSXUSD",
+                                        "title": "US 100 Cash CFD"
+                                    },
+                                    {
+                                        "proName": "FX_IDC:EURUSD",
+                                        "title": "EUR to USD"
+                                    },
+                                    {
+                                        "proName": "BITSTAMP:BTCUSD",
+                                        "title": "Bitcoin"
+                                    },
+                                    {
+                                        "proName": "BITSTAMP:ETHUSD",
+                                        "title": "Ethereum"
+                                    }
+                                ],
+                                    "isTransparent": false,
+                                        "showSymbolLogo": true,
+                                            "colorTheme": "dark",
+                                                "locale": "en"
+                            }
+                        </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+            <div style="height: 100vh; margin-top: 20px;">
+                <div class="tradingview-widget-container" style="height:100%;width:100%">
+                    <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                    <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "autosize": true,
+                                    "symbol": "BITSTAMP:BTCUSD",
+                                        "interval": "1",
+                                            "timezone": "Etc/UTC",
+                                                "theme": "dark",
+                                                    "style": "1",
+                                                        "locale": "in",
+                                                            "enable_publishing": false,
+                                                                "hide_side_toolbar": false,
+                                                                    "allow_symbol_change": true,
+                                                                        "calendar": false,
+                                                                            "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                </div>
+            </div>
 
+        </section>
 
 
 

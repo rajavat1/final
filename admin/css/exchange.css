@@ -126,6 +126,7 @@ section {
 }
 
 section {
+    height: 80vh;
 
     .flex {
         display: flex;

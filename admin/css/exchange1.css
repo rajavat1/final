@@ -1,3 +1,18 @@
+main {
+    grid-template-columns: 16rem auto;
+}
+
+section {
+    height: 90vh;
+}
+
+.mainexchange {
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .button-wrap {
     display: flex;
     gap: 20px;
@@ -34,12 +49,16 @@ div.active {
 
 .content {
     width: 100%;
-    background-color: #fff;
+    background-color: #ffffff36;
     height: 100%;
+    padding: 20px;
+    border-radius: 20px;
 
-    div {
+    .content-1 {
         height: 100%;
-        background: aqua;
+        text-align: center;
+        h1{
 
+        }
     }
 }

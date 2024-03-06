@@ -1,0 +1,45 @@
+.button-wrap {
+    display: flex;
+    gap: 20px;
+}
+
+a.button {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+
+a.active {
+    background-color: red;
+}
+
+.content {
+    margin-top: 30px;
+}
+
+div[class*="content-"] {
+    display: none;
+}
+
+div.active {
+    display: block;
+}
+
+.content {
+    width: 100%;
+    background-color: #fff;
+    height: 100%;
+
+    div {
+        height: 100%;
+        background: aqua;
+
+    }
+}

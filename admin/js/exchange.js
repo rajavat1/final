@@ -19,17 +19,29 @@ exchange.addEventListener('click', () => {
 
 function compute() {
     const input_currency1 = input_currency.value;
-    // const output_currency1 = output_currency.value;
+    const output_currency1 = output_currency.value;
 
     fetch(`https://min-api.cryptocompare.com/data/price?fsym=${input_currency1}&tsyms=USD`)
         .then(res => res.json())
         .then(res => {
             // const new_rate = res.rates[output_currency1];
             rate.innerText = `1 ${input_currency1} = ${res.USD} USD`
-            // output_amount.value = (input_amount.value * new_rate).toFixed(2);
-            // rate.innerHTML = `${res.USD}`
+            console.log(res.USD)
+
+            const pricePerBitcoinInINR = res.USD;
+            if (pricePerBitcoinInINR) {
+                const amountInINR = input_amount.value;
+                const numberOfBitcoins = amountInINR / pricePerBitcoinInINR;
+                console.log(`You can get approximately ${numberOfBitcoins.toFixed(10)} ${input_currency1} for ${amountInINR} USD.`);
+            } else {
+                console.log('Unable to fetch Bitcoin price. Please try again later.');
+            }
+
 
         })
+
+
 }
+
 
 compute();

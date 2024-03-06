@@ -345,12 +345,113 @@
                 <div class="content">
                     <div class="content-1 active">
                         <h1>Exchange</h1>
+                        <div class="exchange">
+                            <div class="input">
+                                <div class="box">
+                                    <label for="input_currency">From : </label>
+                                    <select name="" id="input_currency">
+                                        <option value="USDC">USD Coin</option>
+                                        <option value="BTC">Bitcoin</option>
+                                        <option value="ETH">Ethereum</option>
+                                        <option value="USDT">Tether</option>
+                                        <option value="DOT">Polkadot</option>
+                                        <option value="XRP">XRP</option>
+                                        <option value="ADA">Cardano</option>
+                                        <option value="LTC">Litecoin</option>
+                                        <option value="BCH">Bitcoin Cash</option>
+                                        <option value="LINK">Chainlink</option>
+                                        <option value="XLM">Stellar</option>
+                                        <option value="BNB">Binance Coin</option>
+                                        <option value="WBTC">Wrapped Bitcoin</option>
+                                        <option value="BSV">Bitcoin SV</option>
+                                        <option value="XMR">Monero</option>
+                                        <option value="EOS">EOS</option>
+                                        <option value="UNI">Uniswap</option>
+                                        <option value="AAVE">Aave</option>
+                                        <option value="TRX">TRON</option>
+                                        <option value="XTZ">Tezos</option>
+                                        <option value="XEM">NEM</option>
+                                        <option value="THETA">THETA</option>
+                                        <option value="ATOM">Cosmos</option>
+                                        <option value="ICP">Internet Computer</option>
+                                        <option value="VET">VeChain</option>
+                                        <option value="CRO">Crypto.com Coin</option>
+                                        <option value="NEO">Neo</option>
+                                        <option value="SNX">Synthetix</option>
+                                        <option value="MKR">Maker</option>
+                                        <option value="DAI">Dai</option>
+                                        <option value="LEO">UNUS SED LEO</option>
+                                        <option value="DASH">Dash</option>
+                                        <option value="IOTA">IOTA</option>
+                                        <option value="DOGE">Dogecoin</option>
+                                        <option value="HT">Huobi Token</option>
+                                        <option value="BUSD">Binance USD</option>
+                                    </select>
+                                </div>
+                                <p id="inputprice">00.00</p>
+                            </div>
+                            <button id="exchange">
+                                ↔️
+                            </button>
+                            <div class="output">
+                                <div class="box">
+                                    <label for="output_currency">To : </label>
+                                    <select name="" id="output_currency">
+                                        <option value=".">--Select Currenty To--</option>
+                                        <option value="BTC">Bitcoin</option>
+                                        <option value="ETH">Ethereum</option>
+                                        <option value="USDT">Tether</option>
+                                        <option value="DOT">Polkadot</option>
+                                        <option value="USD">USD</option>
+                                        <option value="XRP">XRP</option>
+                                        <option value="ADA">Cardano</option>
+                                        <option value="LTC">Litecoin</option>
+                                        <option value="BCH">Bitcoin Cash</option>
+                                        <option value="LINK">Chainlink</option>
+                                        <option value="XLM">Stellar</option>
+                                        <option value="BNB">Binance Coin</option>
+                                        <option value="USDC">USD Coin</option>
+                                        <option value="WBTC">Wrapped Bitcoin</option>
+                                        <option value="BSV">Bitcoin SV</option>
+                                        <option value="XMR">Monero</option>
+                                        <option value="EOS">EOS</option>
+                                        <option value="UNI">Uniswap</option>
+                                        <option value="AAVE">Aave</option>
+                                        <option value="TRX">TRON</option>
+                                        <option value="XTZ">Tezos</option>
+                                        <option value="XEM">NEM</option>
+                                        <option value="THETA">THETA</option>
+                                        <option value="ATOM">Cosmos</option>
+                                        <option value="ICP">Internet Computer</option>
+                                        <option value="VET">VeChain</option>
+                                        <option value="CRO">Crypto.com Coin</option>
+                                        <option value="NEO">Neo</option>
+                                        <option value="SNX">Synthetix</option>
+                                        <option value="MKR">Maker</option>
+                                        <option value="DAI">Dai</option>
+                                        <option value="LEO">UNUS SED LEO</option>
+                                        <option value="DASH">Dash</option>
+                                        <option value="IOTA">IOTA</option>
+                                        <option value="DOGE">Dogecoin</option>
+                                        <option value="HT">Huobi Token</option>
+                                        <option value="BUSD">Binance USD</option>
+                                    </select>
+                                </div>
+                                <p id="outputprice">00.00</p>
+                            </div>
+                        </div>
+                        <div class="inputammount">
+                            <input type="number" name="input_amount" id="input_amount"
+                                placeholder="Enter Input Amount in USD" value="1">
+                            <p id="output_amount"></p>
+                        </div>
                     </div>
                     <div class="content-1">
                         <h1>Send</h1>
                     </div>
                     <div class="content-1">
                         <h1>Receive</h1>
+
                     </div>
                 </div>
             </div>
@@ -372,7 +473,7 @@
         </div>
     </footer>
     <script src="../js/script.js"></script>
-    <!-- <script src="../js/exchange.js"></script> -->
+    <script src="../js/exchange.js"></script>
     <script src="../js/exchange2.js"></script>
 </body>
 

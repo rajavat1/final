@@ -70,6 +70,8 @@
     --card-padding: 1.6rem;
     --padding-1: 1rem;
     --padding-2: 8px;
+    --bg-color: #3b363621;
+
 
     --card-border-radius: 1.6rem;
     --border-radius-1: 1rem;
@@ -82,6 +84,7 @@
     --color-light: #23232a;
     --color-dark: #ddd;
     --color-gray-dark: #adacb5;
+    --bg-color: #ffffff36;
 }
 
 * {

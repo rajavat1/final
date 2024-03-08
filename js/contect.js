@@ -14,10 +14,10 @@ function sendmail() {
     };
     emailjs.send("service_rsucbhv", "template_u4pekhc", user).then(
         (response) => {
-            alert('user message delever || Your message is SUCCESSFULLY deleverd!', response.status, response.text);
+            alert('Your message is SUCCESSFULLY deleverd!', response.status, response.text);
         },
         (error) => {
-            alert('User || Sonthing Went Wrong!!', error);
+            alert('Sonthing Went Wrong!!', error);
         },
     );
     var admin = {
@@ -30,11 +30,11 @@ function sendmail() {
 
     emailjs.send("service_enhapds", "template_jikry1d", admin).then(
         (response) => {
-            alert(' Admin || Your message is SUCCESSFULLY deleverd!', response.status, response.text);
+           // alert(' Admin || Your message is SUCCESSFULLY deleverd!', response.status, response.text);
 
         },
         (error) => {
-            alert('Admin|| Sonthing Went Wrong!!', error);
+           // alert('Admin|| Sonthing Went Wrong!!', error);
 
         },
     );
